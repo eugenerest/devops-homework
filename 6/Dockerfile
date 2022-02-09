@@ -12,6 +12,7 @@ RUN cp -Rv /tmp/apache-tomcat-9.0.58/* /usr/local/tomcat
 RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
 WORKDIR /tmp/boxfuse-sample-java-war-hello
 RUN mvn package
-RUN cp /boxfuse-sample-java-war-hello/target/hello-1.0.war /usr/local/tomcat/webapps/
+WORKDIR /tmp/boxfuse-sample-java-war-hello/target/
+RUN cp hello-1.0.war /usr/local/tomcat/webapps/
 EXPOSE 8080
 CMD /usr/local/tomcat/bin/catalina.sh run
