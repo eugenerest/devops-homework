@@ -1,5 +1,5 @@
 FROM tomcat:jdk8-corretto
-RUN apt install -y maven
-RUN apt install -y git
-RUN apt install -y wget
+RUN yum install -y maven
+RUN yum install -y git
+RUN yum install -y wget
 RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello
