@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM ubuntu:18.04
 RUN apt-get update
 COPY app/requirements.txt /tmp/
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y -q python-all python-pip
