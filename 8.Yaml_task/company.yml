@@ -1,0 +1,28 @@
+---
+ - company:
+    - name: Dream
+    - departments:
+      - department1:
+        - employees:
+          - olga:
+            name: Olga1
+            position: accountant
+          - olga:
+            name: Olga2
+            position: accountant
+          - olga:
+            name: Olga3
+            position: accountant
+          - olga:
+            name: Olga4
+            position: accountant
+          - dmitriy:
+            name: Dmitriy1
+          - dmitriy:
+            name: Dmitriy2
+          - dmitriy:
+            name: Dmitriy3
+          - ivan:
+            name: Ivan1
+          - ivan:
+            name: Ivan2
