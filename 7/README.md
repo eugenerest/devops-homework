@@ -8,9 +8,9 @@ Tools:
  - docker-compose
 
 Running:
-    git clone https://github.com/eugenerest/devops-homework.git
-    cd ./devops-homework/7/
-    docker-compose up -d --build
+    1) git clone https://github.com/eugenerest/devops-homework.git
+    2) cd ./devops-homework/7/
+    3) docker-compose up -d --build
 
 Done!
 
