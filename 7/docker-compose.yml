@@ -20,3 +20,6 @@ services:
     entrypoint:
       - "catalina.sh"
       - "run"
+
+volumes:
+  artefact:
