@@ -2,12 +2,12 @@ boxfuse-sample-java-war-hello
 
 Boxfuse Sample Hello World Java application packaged as a war file via docker-compose
 
-Prerequisites
+Tools:
  - git
  - docker.io
  - docker-compose
 
-Running
+Running:
     git clone https://github.com/eugenerest/devops-homework.git
     cd ./devops-homework/7/
     docker-compose up -d --build
