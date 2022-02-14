@@ -5,24 +5,55 @@
       - department1:
         - employees:
           - olga:
-            name: Olga1
-            position: accountant
+              name: Olga1
+              position: accountant
           - olga:
-            name: Olga2
-            position: accountant
+              name: Olga2
+              position: accountant
           - olga:
-            name: Olga3
-            position: accountant
+              name: Olga3
+              position: accountant
           - olga:
-            name: Olga4
-            position: accountant
+              name: Olga4
+              position: accountant
           - dmitriy:
-            name: Dmitriy1
+              name: Dmitriy1
           - dmitriy:
-            name: Dmitriy2
+              name: Dmitriy2
           - dmitriy:
-            name: Dmitriy3
+              name: Dmitriy3
           - ivan:
-            name: Ivan1
+              name: Ivan1
           - ivan:
-            name: Ivan2
+              name: Ivan2
+      - department2:
+        - employees:
+          - roman:
+              name: Roman1
+              position: lawyer
+          - roman:
+              name: Roman2
+              position: lawyer
+          - roman:
+              name: Roman3
+              position: lawyer
+          - roman:
+              name: Roman4
+             position: lawyer
+          - maksim:
+              name: Maksim1
+              position: driver
+          - maksim:
+              name: Maksim2
+              position: driver
+      - department3:
+       - employees:
+         - ivan:
+             name: Ivan3
+             position: builder
+         - nikolay:
+             name: Nikolay1
+             position: builder
+         - olga:
+             name: Olga4
+             position: lawyer
