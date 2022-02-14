@@ -1,0 +1,10 @@
+version: "3.2"
+services:
+  packer:
+    build: .
+    volumes:
+     - type: volume
+       source: artefact
+       target: /tmp/boxfuse-sample-java-war-hello/target/
+
+production:
