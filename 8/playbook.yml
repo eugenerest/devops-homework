@@ -22,12 +22,12 @@
   - name: Clone a github repository
     git:
       repo: https://github.com/boxfuse/boxfuse-sample-java-war-hello
-      dest: /home/restes/repos/boxfuse/
+      dest: /home/restes/boxfuse/
       clone: yes
       update: yes
 
   - name: Ensure boxfuse is packaged
-    command: mvn -f /home/restes/repos/boxfuse/pom.xml package
+    command: mvn -f /home/restes/boxfuse/pom.xml package
 
 - name: Production
   hosts: prod
@@ -40,5 +40,5 @@
       state: present
 
   - name: Copy Maven artifact from Packer to Prod
-    synchronize: src=/home/restes/repos/boxfuse/target/hello-1.0.war dest=/var/lib/tomcat9/webapps
-    delegate_to: 84.201.164.170
+    synchronize: src=/home/restes/boxfuse/target/hello-1.0.war dest=/var/lib/tomcat9/webapps
+    delegate_to: 84.252.143.226
