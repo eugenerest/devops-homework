@@ -1,2 +1,27 @@
 ---
-- name: 
+- name: Preparation and packaging
+  hosts: packer
+  become: yes
+
+  tasks:
+  - name: Ensure default-jdk is present
+    apt:
+      name: default-jdk
+      state: present
+
+  - name: Ensure git is present
+    apt:
+      name: git
+      state: present
+
+  - name: Ensure maven is present
+    apt:
+      name: maven
+      state: present
+
+  - name: Clone a github repository
+    git:
+      repo: https://github.com/boxfuse/boxfuse-sample-java-war-hello
+      dest: /home/restes/repos/boxfuse/
+      clone: yes
+      update: yes
