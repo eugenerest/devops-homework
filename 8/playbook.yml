@@ -41,4 +41,4 @@
 
   - name: Copy Maven artifact from Packer to Prod
     synchronize: src=/home/restes/boxfuse/target/hello-1.0.war dest=/var/lib/tomcat9/webapps
-    delegate_to: 84.201.164.170
+    delegate_to: 84.252.143.226
