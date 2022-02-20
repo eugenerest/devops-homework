@@ -1,1 +1,14 @@
 ---
+- name: Preparation and packaging
+  hosts: vm2
+  become: yes
+
+  roles:
+    - packer
+
+- name: Production
+  hosts: vm3
+  become: yes
+
+  roles:
+    - prod
