@@ -6,12 +6,13 @@
        - default-jdk
        - git
        - maven
-
+       
 - name: Clone a github repository
-  repo: "{{ git_repo }}"
-  dest: "{{ local_repo }}"
-  clone: yes
-  update: yes
+  git:
+    repo: "{{ git_repo }}"
+    dest: "{{ local_repo }}"
+    clone: yes
+    update: yes
 
 - name: Ensure boxfuse is packaged
   command: mvn -f /home/restes/boxfuse/pom.xml package
