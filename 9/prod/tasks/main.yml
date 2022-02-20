@@ -1,2 +1,10 @@
 ---
 # tasks file for prod
+- name: Ensure tomcat is present
+  apt:
+    name: tomcat9
+    state: present
+
+- name: Copy Maven artifact from Packer to Prod
+  synchronize: src={{ artifact_src }} dest= {{ tomcat_webapps }}
+  delegate_to: 84.201.139.216

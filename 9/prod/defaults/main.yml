@@ -1,2 +1,4 @@
 ---
 # defaults file for prod
+artifact_src: /home/restes/boxfuse/target/hello-1.0.war
+tomcat_webapps: /var/lib/tomcat9/webapps

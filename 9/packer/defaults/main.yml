@@ -1,2 +1,4 @@
 ---
 # defaults file for packer
+git_repo: https://github.com/boxfuse/boxfuse-sample-java-war-hello
+local_repo: /home/restes/boxfuse/
