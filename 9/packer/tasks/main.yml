@@ -8,8 +8,8 @@
        - maven
 
 - name: Clone a github repository
-  repo: {{ git_repo }}
-  dest: {{ local_repo }}
+  repo: "{{ git_repo }}"
+  dest: "{{ local_repo }}"
   clone: yes
   update: yes
 
