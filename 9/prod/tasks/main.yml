@@ -6,5 +6,5 @@
     state: present
 
 - name: Copy Maven artifact from Packer to Prod
-  synchronize: src={{ artifact_src }} dest= {{ tomcat_webapps }}
+  synchronize: src="{{ artifact_src }}" dest="{{ tomcat_webapps }}"
   delegate_to: 84.201.139.216
