@@ -5,4 +5,5 @@ RUN wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.58/bin/apache-tomcat-9.0.
 WORKDIR /tmp
 RUN tar xvfz tomcat.tar.gz
 RUN cp -Rv /tmp/apache-tomcat-9.0.58/* /usr/local/tomcat
+RUN cp ./target/*.war /usr/local/tomcat/webapps/
 EXPOSE 8080
