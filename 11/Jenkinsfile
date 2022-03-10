@@ -1,0 +1,36 @@
+pipeline {
+    agent {
+        docker { image 'xx.xx.xx.xx:8132/builder:1.0'
+        }
+    }
+    
+    stages {
+        stage('Git') {
+            steps {
+                git 'https://github.com/eugenerest/boxfuse.git'
+            }
+        }
+        
+        stage('Build') {
+            steps {
+                sh 'mvn package'
+            }
+        }
+        
+        stage('Create docker image') {
+            steps {
+                sh 'docker build -t mywebapp:1.0 .'
+                sh 'docker tag builder:1.0 xx.xx.xx.xx:8132/mywebapp:1.0 && docker push xx.xx.xx.xx:8132/mywebapp:1.0''
+            }
+        }
+        
+        stage('Web app on prod') {
+            agent{
+                label '*'
+            }
+            steps {
+                sh 'docker run -d --name boxfuse -p 8080:8080 xx.xx.xx.xx:8132/mywebapp:1.0'
+            }
+        }
+    }
+}
