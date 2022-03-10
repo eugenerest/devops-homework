@@ -1,0 +1,8 @@
+FROM openjdk:19-jdk-alpine3.15
+RUN apk update && apk add wget
+RUN mkdir /usr/local/tomcat
+RUN wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.58/bin/apache-tomcat-9.0.58.tar.gz -O /tmp/tomcat.tar.gz
+WORKDIR /tmp
+RUN tar xvfz tomcat.tar.gz
+RUN cp -Rv /tmp/apache-tomcat-9.0.58/* /usr/local/tomcat
+EXPOSE 8080
