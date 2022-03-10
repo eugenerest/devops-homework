@@ -20,11 +20,11 @@ pipeline {
         stage('Create docker image') {
             steps {
                 sh 'docker build -t mywebapp:1.0 .'
-                sh 'docker tag builder:1.0 xx.xx.xx.xx:8132/mywebapp:1.0 && docker push xx.xx.xx.xx:8132/mywebapp:1.0''
+                sh 'docker tag builder:1.0 xx.xx.xx.xx:8132/mywebapp:1.0 && docker push xx.xx.xx.xx:8132/mywebapp:1.0'
             }
         }
         
-        stage('Web app on prod') {
+        stage('App on prod') {
             agent{
                 label '*'
             }
