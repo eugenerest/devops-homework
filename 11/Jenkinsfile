@@ -1,6 +1,7 @@
 pipeline {
     agent {
         docker { image '178.154.193.170:8132/builder:1.0'
+        args '-v /var/run/docker.sock:/var/run/docker.sock -u root'
         }
     }
     
@@ -24,6 +25,9 @@ pipeline {
             }
         }
         stage('App on prod') {
+            agent{
+                label 'node1'
+            }
             steps {
                 sh 'docker run -d --name boxfuse -p 8081:8080 178.154.193.170:8132/mywebapp:1.0'
             }
