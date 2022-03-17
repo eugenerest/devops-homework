@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        docker { image 'xx.xx.xx.xx:8132/builder:1.0'
+        docker { image '178.154.193.170:8132/builder:1.0'
         }
     }
     
@@ -20,16 +20,12 @@ pipeline {
         stage('Create docker image') {
             steps {
                 sh 'docker build -t mywebapp:1.0 .'
-                sh 'docker tag builder:1.0 xx.xx.xx.xx:8132/mywebapp:1.0 && docker push xx.xx.xx.xx:8132/mywebapp:1.0'
+                sh 'docker tag builder:1.0 178.154.193.170:8132/mywebapp:1.0 && docker push 178.154.193.170:8132/mywebapp:1.0'
             }
         }
-        
         stage('App on prod') {
-            agent{
-                label '*'
-            }
             steps {
-                sh 'docker run -d --name boxfuse -p 8080:8080 xx.xx.xx.xx:8132/mywebapp:1.0'
+                sh 'docker run -d --name boxfuse -p 8080:8080 178.154.193.170:8132/mywebapp:1.0'
             }
         }
     }
