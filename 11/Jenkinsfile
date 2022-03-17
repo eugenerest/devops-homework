@@ -1,7 +1,8 @@
 pipeline {
     agent {
-        docker { image '178.154.193.170:8132/builder:1.0'
-        args '-v /var/run/docker.sock:/var/run/docker.sock -u root'
+        docker {
+            image '178.154.193.170:8132/builder:1.0'
+            args '-v /var/run/docker.sock:/var/run/docker.sock -u root'
         }
     }
     
