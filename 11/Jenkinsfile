@@ -25,7 +25,7 @@ pipeline {
         }
         stage('App on prod') {
             steps {
-                sh 'docker run -d --name boxfuse -p 8080:8080 178.154.193.170:8132/mywebapp:1.0'
+                sh 'docker run -d --name boxfuse -p 8081:8080 178.154.193.170:8132/mywebapp:1.0'
             }
         }
     }
